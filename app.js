@@ -28,7 +28,8 @@ app.use((req, res, next) => {
     "Origin, X-Requested-With, Content-Type, Accept, Authotization"
   );
   if (req.method === "OPTIONS") {
-    res.header("Access-COntrol-Allow-Method", "PUT,POST,PATCH,DELETE,GET");
+    // console.log("in options method");
+    res.header("Access-Control-Allow-Method", "PUT,POST,PATCH,DELETE,GET");
     res.status(200).json({});
   }
   next();
@@ -41,7 +42,7 @@ app.use("/v2/users", userRoutesv2);
 app.use("/v1/country", countryRoutes);
 
 app.get("/", (req, res, next) => {
-  // console.log("get route");
+  console.log(req.originalUrl);
   res.status(200).json({ message: "Hello from Rest API" });
 });
 

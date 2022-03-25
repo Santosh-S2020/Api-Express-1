@@ -2,21 +2,21 @@
 
 import express from "express";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
 import userRoutes from "./Routes/users.js";
 import countryRoutes from "./Routes/country.js";
-import humanRoutes from "./Routes/humanRoutes.js";
 
 //Intitialize express app
+dotenv.config();
+console.log(process.env.PORT);
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //Tell node that we are going to use json format
 app.use(bodyParser.json());
 
 //users Routes import
 app.use("/users", userRoutes);
-
-app.use("/users/human", humanRoutes);
 
 //country routes
 app.use("/country", countryRoutes);

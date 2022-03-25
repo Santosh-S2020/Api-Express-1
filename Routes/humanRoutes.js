@@ -1,3 +1,5 @@
+"use strict";
+
 import express from "express";
 import { v4 as uuidv4 } from "uuid";
 
@@ -9,9 +11,9 @@ let Persons = [
   },
 ];
 
-console.log("in human");
-router.get("/human", (req, res) => {
-  console.log(Persons);
+// console.log("in human");
+router.get("/:id/human", (req, res) => {
+  // console.log(req);
   res.send(Persons);
   //   res.send(Persons.filter((person) => person.firstName === req.body.firstName));
 });

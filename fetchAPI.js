@@ -7,7 +7,7 @@ console.log("Hello, World fetc method!!");
 //   .then((res) => console.log(res));
 
 async function getUser() {
-  response = await fetch("http://127.0.0.1:3000/v1/users");
+  response = await fetch("http://34.203.190.21:3000/v1/users");
   users = await response.json();
   console.log(users);
 }

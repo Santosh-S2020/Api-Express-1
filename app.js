@@ -52,5 +52,5 @@ app.get("*", (req, res, next) => {
 });
 
 app.listen(PORT, () =>
-  console.log(`Server started at http://localhost:${PORT}`)
+  console.log(`express Server started at http://localhost:${PORT}`)
 );

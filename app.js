@@ -48,7 +48,7 @@ app.get("/", (req, res, next) => {
 
 app.get("*", (req, res, next) => {
   return res.status(404).json({ message: "bad API path" });
-  // res.send("bad request");
+  // res.send("bad  request");
 });
 
 app.listen(PORT, () =>

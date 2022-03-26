@@ -10,6 +10,6 @@ export "NVM_DIR"="$HOME/.nvm"
 [ -s "NVM_DIR/bash_completion"] && \. "$NVM_DIR/bash_completion" #load nvm bash_completion
 
 #install node dependency
-npm install
+sudo npm install
 #start node app in backend
-node app.js > app.out.log 2> app.err.log < /deb/null &
+sudo node app.js > app.out.log 2> app.err.log < /deb/null &

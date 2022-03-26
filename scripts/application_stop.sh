@@ -2,4 +2,4 @@
 
 # stoping express server
 echo "stoping express API apps"
-pkill node
+sudo pkill node

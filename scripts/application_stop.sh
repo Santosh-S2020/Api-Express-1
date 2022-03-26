@@ -1,3 +1,3 @@
 #!/bin/bash
 # stoping express server
-# echo "stoping express API apps"
+echo "stoping express API apps"

@@ -5,9 +5,9 @@ cd /home/ec2-user/express-app
 
 # add npm and node to path variable
 
-export "NVM_DIR"="$HOME/.nvm"
-[ -s "NVM_DIR"/nvm.sh ] && \. "$NVM_DIR/nvm.sh" #loads NVM
-[ -s "NVM_DIR/bash_completion"] && \. "$NVM_DIR/bash_completion" #load nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #install node dependency
 npm install

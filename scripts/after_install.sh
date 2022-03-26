@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/ec2-user/nodejs
+cd /home/ec2-user/express-app
 
 echo "installing node depenedencies"
 

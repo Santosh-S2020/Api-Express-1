@@ -16,7 +16,7 @@ let Persons = [
 ];
 
 let cache = apicache.middleware;
-router.get("/", cache("1 minutes"), (req, res, next) => {
+router.get("/", (req, res, next) => {
   //   console.log(Persons);
   res.status(200).json({
     message: "Here are all users requested",
@@ -25,7 +25,7 @@ router.get("/", cache("1 minutes"), (req, res, next) => {
   //   res.send(Persons.filter((person) => person.firstName === req.body.firstName));
 });
 
-router.get("/:id", cache("1 minutes"), (req, res, next) => {
+router.get("/:id", (req, res, next) => {
   const { id } = req.params;
   //   res.send(req.params);
   // console.log("in id" + id);
@@ -54,7 +54,11 @@ router.post("/", (req, res, next) => {
   };
   // console.log("in post");
   Persons.push(newPerson);
-  res.status(200).json(Persons);
+  // console.log(Persons);
+  res.status(200).json({
+    message: "here are all users",
+    person: Persons,
+  });
   //   res.send(Persons.filter((person) => person.firstName === req.body.firstName));
 });
 

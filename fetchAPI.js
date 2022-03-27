@@ -7,7 +7,9 @@ console.log("Hello, World fetc method!!");
 //   .then((res) => console.log(res));
 
 async function getUser() {
-  response = await fetch("http://localhost:3000/v1/users");
+  response = await fetch(
+    "https://ve19f9uie2.execute-api.us-east-1.amazonaws.com/DEV/v1/users"
+  );
   users = await response.json();
   console.log(users);
 }
@@ -22,13 +24,15 @@ const nameUser = {
 async function postUser(nameUser) {
   // console.log(nameUser);
   response = await fetch(
-    "https://ve19f9uie2.execute-api.us-east-1.amazonaws.com/DEV/users",
+    "https://ve19f9uie2.execute-api.us-east-1.amazonaws.com/DEV",
     {
       headers: {
         "Content-Type": "application/json",
+        "x-api-key": "gebQFPZ8c37J4Y4jdyvij8uY3gwRzfcD6h3rxMUO",
       },
       method: "POST",
       mode: "cors",
+
       body: JSON.stringify(nameUser),
     }
   );

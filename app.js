@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   // res.header("Access-Control-Allow-Headers", "*");
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authotization"
+    "Origin, X-Requested-With, Content-Type, Accept, Authotization, x-api-key"
   );
   if (req.method === "OPTIONS") {
     console.log("in options method");
